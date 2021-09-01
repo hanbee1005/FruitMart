@@ -9,6 +9,22 @@ import SwiftUI
 
 struct Home: View {
     var body: some View {
+        VStack {
+            ProductRow()
+            ProductRow()
+            ProductRow()
+        }
+    }
+}
+
+struct Home_Previews: PreviewProvider {
+    static var previews: some View {
+        Home()
+    }
+}
+
+struct ProductRow: View {
+    var body: some View {
         HStack {
             // 상품 이미지
             Image("apple")
@@ -58,11 +74,5 @@ struct Home: View {
         .cornerRadius(6)
         .shadow(color: Color.primary.opacity(0.33),radius: 1, x: 2, y: 2)
         .padding(.vertical, 8)
-    }
-}
-
-struct Home_Previews: PreviewProvider {
-    static var previews: some View {
-        Home()
     }
 }
