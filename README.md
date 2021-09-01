@@ -26,3 +26,6 @@ FruitMart
 ```
 
 - xcode로 프로젝트 실행 후 FruitMart > Build Settings > Packaging 에서 Info.plist File 을 FruitMart/Supporting Files/Info.plist 로 정확하게 입력!
+
+- ContentView.swift 파일을 Home.swift 파일로 변경하였기 때문에 기존 ContentView() 를 사용한 부분을 Home() 으로 변경!       
+  (Home.swift, SceneDelegate.swift 파일 수정)
