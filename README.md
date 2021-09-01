@@ -13,8 +13,8 @@ FruitMart
 │     └─Home
 │          
 ├─Resources
-│  ├─Assets.xcassets
-│  └─ProductData.json
+│  ├─Assets.xcassets    // 이미지와 색 설정
+│  └─ProductData.json   // 더미 데이터 (read-only)
 │  
 ├─Supporting Files
 │  ├─LaunchScreen.stiryboard
