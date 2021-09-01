@@ -15,6 +15,7 @@
 		FBF732AA26DF144200C5FC4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBF732A826DF144200C5FC4F /* LaunchScreen.storyboard */; };
 		FBF732B726DF14F500C5FC4F /* ProductData.json in Resources */ = {isa = PBXBuildFile; fileRef = FBF732B626DF14F500C5FC4F /* ProductData.json */; };
 		FBF732BA26DF4C4300C5FC4F /* ProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF732B926DF4C4300C5FC4F /* ProductRow.swift */; };
+		FBF732BE26DF507800C5FC4F /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF732BD26DF507800C5FC4F /* ColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		FBF732AB26DF144200C5FC4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBF732B626DF14F500C5FC4F /* ProductData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ProductData.json; sourceTree = "<group>"; };
 		FBF732B926DF4C4300C5FC4F /* ProductRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRow.swift; sourceTree = "<group>"; };
+		FBF732BD26DF507800C5FC4F /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				FBF732B226DF146B00C5FC4F /* Application */,
 				FBF732B326DF148300C5FC4F /* User Interface */,
+				FBF732BB26DF504500C5FC4F /* Helper */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -127,6 +130,22 @@
 				FBF732AB26DF144200C5FC4F /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FBF732BB26DF504500C5FC4F /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				FBF732BC26DF506200C5FC4F /* Extension */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		FBF732BC26DF506200C5FC4F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FBF732BD26DF507800C5FC4F /* ColorExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +223,7 @@
 				FBF7329E26DF144200C5FC4F /* AppDelegate.swift in Sources */,
 				FBF732A026DF144200C5FC4F /* SceneDelegate.swift in Sources */,
 				FBF732A226DF144200C5FC4F /* Home.swift in Sources */,
+				FBF732BE26DF507800C5FC4F /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
