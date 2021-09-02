@@ -16,7 +16,7 @@ struct ProductRow: View {
         .frame(height: 150)  // 뷰 전체의 높이를 150으로 설정
         .background(Color.primary.colorInvert())
         .cornerRadius(6)
-        .shadow(color: Color.primary.opacity(0.33),radius: 1, x: 2, y: 2)
+        .shadow(color: .primaryShadow,radius: 1, x: 2, y: 2)
         .padding(.vertical, 8)
     }
 }
@@ -41,7 +41,7 @@ private extension ProductRow {
             // 상품 설명
             Text("달콤한 맛이 좋은 과일의 여왕 사과. 독은 없고 꿀만 가득해요!")
                 .font(.footnote)
-                .foregroundColor(.secondary)
+                .foregroundColor(.secondaryText)
             
             Spacer()
             
@@ -62,12 +62,12 @@ private extension ProductRow {
             // 하트 아이콘
             Image(systemName: "heart")
                 .imageScale(.large)
-                .foregroundColor(Color("peach"))
+                .foregroundColor(.peach)
                 .frame(width: 32, height: 32)
             
             // 카트 아이콘
             Image(systemName: "cart")
-                .foregroundColor(Color("peach"))
+                .foregroundColor(.peach)
                 .frame(width: 32, height: 32)
         }
     }
