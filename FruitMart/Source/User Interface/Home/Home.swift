@@ -13,7 +13,9 @@ struct Home: View {
     var body: some View {
         NavigationView {
             List(store.products) { product in
-                ProductRow(product: product)
+                NavigationLink(destination: Text("상세 화면")) {
+                    ProductRow(product: product)
+                }
             }
             .navigationBarTitle("과일마트")
         }
