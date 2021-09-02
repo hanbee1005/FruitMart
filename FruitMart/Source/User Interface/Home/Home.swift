@@ -11,7 +11,7 @@ struct Home: View {
     let store: Store
     
     var body: some View {
-        List(store.products, id: \.name) { product in
+        List(store.products) { product in
             ProductRow(product: product)
         }
     }
