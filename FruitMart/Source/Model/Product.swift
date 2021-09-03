@@ -8,7 +8,7 @@
 import Foundation
 
 struct Product {
-    var id: UUID = UUID()  // identifiabe 프로토콜 준수를 위한 id 프로퍼티 추가
+    let id: UUID = UUID()  // identifiabe 프로토콜 준수를 위한 id 프로퍼티 추가
     let name: String
     let imageName: String
     let price: Int
@@ -21,7 +21,7 @@ extension Product: Decodable {}
 extension Product: Identifiable {}
 
 let productSamples = [
-    Product(name: "나는야 무화과" , imageName: "fig" , price: 3100, description: "소화가 잘되고 변비에 좋은 달들h한 국내산 무화과예요. 고기와 찰떡궁합!"),
+    Product(name: "나는야 무화과" , imageName: "fig" , price: 3100, description: "소화가 잘되고 변비에 좋은 달달한 국내산 무화과예요. 고기와 찰떡궁합!"),
     Product(name: "유기농 아보카도" , imageName: "avocado" , price: 2900, description: "미네랄도 풍부하고, 요리 장식과 소스로도 좋은 아보카도입니다."),
     Product(name: "바나나 안 바나나", imageName: "banana", price: 2400, description: "달콤한 맛의 바나나. 이렇게 맛있으니 내가 바나나 안 바나나?", isFavorite: true),
     Product(name: "아임 파인애플", imageName: "pineapple", price: 3000, description: "소화와 피로회복, 비타민까지! 파인애플로 맛과 영양까지 한 번에!"),
