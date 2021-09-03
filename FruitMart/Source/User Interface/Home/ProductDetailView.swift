@@ -106,9 +106,13 @@ struct ProductDetailView: View {
 
 struct ProductDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ForEach(["iPhone 11 Pro", "iPhone 8"], id: \.self) {
-            ProductDetailView(product: productSamples[0])
-                .previewDevice(PreviewDevice(rawValue: $0))
+        let source1 = ProductDetailView(product: productSamples[0])
+        let source2 = ProductDetailView(product: productSamples[1])
+        return Group {
+            // 나머지 매개 변수 생략 시 총 4가지 환경에서의 프리뷰 출력
+            Preview(source: source1)
+            // iPhone 11 Pro + 라이트 모드 - 1가지 환경에서만 출력
+            Preview(source: source2, devices: [.iPhone11Pro], displayDarkMode: false)
         }
     }
 }
