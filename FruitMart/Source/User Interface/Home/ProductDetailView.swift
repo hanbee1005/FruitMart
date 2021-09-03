@@ -26,7 +26,8 @@ struct ProductDetailView: View {
         }
     }
     
-    var orderView: some View {  // 상품 설명과 주문하기 버튼 등을 모두 포함하는 컨테이너
+    // 상품 설명과 주문하기 버튼 등을 모두 포함하는 컨테이너
+    var orderView: some View {
         GeometryReader {
             VStack(alignment: .leading) {
                 self.productDescription  // 상품명과 즐겨찾기 버튼 (하트 모양) 이미지
@@ -78,7 +79,8 @@ struct ProductDetailView: View {
         .foregroundColor(.black)
     }
     
-    var placeOrderButton: some View {  // 주문하기 버튼
+    // 주문하기 버튼
+    var placeOrderButton: some View {
         Button(action: { }) {
             Capsule()
                 .fill(Color.peach)
