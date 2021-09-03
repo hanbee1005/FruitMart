@@ -61,11 +61,7 @@ private extension ProductRow {
             
             Spacer()
             
-            // 하트 아이콘
-            Image(systemName: "heart")
-                .imageScale(.large)
-                .foregroundColor(.peach)
-                .frame(width: 32, height: 32)
+            FavoriteButton(product: product)
             
             // 카트 아이콘
             Image(systemName: "cart")

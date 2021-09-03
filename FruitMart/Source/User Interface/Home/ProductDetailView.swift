@@ -54,10 +54,7 @@ struct ProductDetailView: View {
                 
                 Spacer()
                 
-                Image(systemName: "heart")  // 즐겨찾기 버튼
-                    .imageScale(.large)
-                    .foregroundColor(.peach)
-                    .frame(width: 32, height: 32)
+                FavoriteButton(product: product)
             }
             
             Text(splitText(product.description))  // 상품 설명
@@ -110,7 +107,7 @@ struct ProductDetailView: View {
 struct ProductDetailView_Previews: PreviewProvider {
     static var previews: some View {
         let source1 = ProductDetailView(product: productSamples[0])
-        let source2 = ProductDetailView(product: productSamples[1])
+        let source2 = ProductDetailView(product: productSamples[2])
         return Group {
             // 나머지 매개 변수 생략 시 총 4가지 환경에서의 프리뷰 출력
             Preview(source: source1)

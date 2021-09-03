@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A1D9B0A26E234DA00EB5EA5 /* QuantitySelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1D9B0926E234DA00EB5EA5 /* QuantitySelector.swift */; };
+		1A1D9B0C26E2455800EB5EA5 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1D9B0B26E2455800EB5EA5 /* FavoriteButton.swift */; };
 		1A5B4DC326E0E6E100B447B5 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5B4DC226E0E6E100B447B5 /* Product.swift */; };
 		1A5B4DC526E103F400B447B5 /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5B4DC426E103F400B447B5 /* BundleExtension.swift */; };
 		1A5B4DC726E1063200B447B5 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5B4DC626E1063200B447B5 /* Store.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		1A1D9B0926E234DA00EB5EA5 /* QuantitySelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantitySelector.swift; sourceTree = "<group>"; };
+		1A1D9B0B26E2455800EB5EA5 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		1A5B4DC226E0E6E100B447B5 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		1A5B4DC426E103F400B447B5 /* BundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
 		1A5B4DC626E1063200B447B5 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				FBF732B926DF4C4300C5FC4F /* ProductRow.swift */,
 				1A5B4DC826E10B3A00B447B5 /* ProductDetailView.swift */,
 				1A1D9B0926E234DA00EB5EA5 /* QuantitySelector.swift */,
+				1A1D9B0B26E2455800EB5EA5 /* FavoriteButton.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				FBF732BA26DF4C4300C5FC4F /* ProductRow.swift in Sources */,
 				FBF7329E26DF144200C5FC4F /* AppDelegate.swift in Sources */,
 				FB01214C26E1FACE005A2D80 /* Preview.swift in Sources */,
+				1A1D9B0C26E2455800EB5EA5 /* FavoriteButton.swift in Sources */,
 				1A1D9B0A26E234DA00EB5EA5 /* QuantitySelector.swift in Sources */,
 				FBF732A026DF144200C5FC4F /* SceneDelegate.swift in Sources */,
 				1A5B4DC726E1063200B447B5 /* Store.swift in Sources */,
