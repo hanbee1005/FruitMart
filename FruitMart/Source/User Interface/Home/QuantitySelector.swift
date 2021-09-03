@@ -11,6 +11,9 @@ struct QuantitySelector: View {
     @Binding var quantity: Int
     var range: ClosedRange<Int> = 1...20
     
+    private let softFeedback = UIImpactFeedbackGenerator(style: .soft)
+    private let rigidFeedback = UIImpactFeedbackGenerator(style: .rigid)
+    
     var body: some View {
         HStack {
             // 수량 감소 버튼
@@ -40,6 +43,11 @@ struct QuantitySelector: View {
     private func changeQuantity(_ num: Int) {
         if range ~= quantity + num {
             quantity += num
+            softFeedback.prepare() // 진동 지연 시간을 줄일 수 있도록 미리 준비시키는 메소드
+            softFeedback.impactOccurred(intensity: 0.8)
+        } else {
+            rigidFeedback.prepare()
+            rigidFeedback.impactOccurred()
         }
     }
 }
