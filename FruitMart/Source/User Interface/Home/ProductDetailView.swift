@@ -36,7 +36,7 @@ struct ProductDetailView: View {
                 self.placeOrderButton // 주문하기 버튼
             }
             // 지오메트리 리더가 차지하는 뷰의 높이보다 VStack 높이가 10정도 크도록
-            .frame(height: $0.size.height + 10)
+            .frame(height: $0.size.height - 10)
             .padding(32)
             .background(Color.white)  // 다크모드에서도 흰색 배경을 사용하기 위해
             .cornerRadius(16)
