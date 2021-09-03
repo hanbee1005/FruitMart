@@ -9,8 +9,11 @@ import SwiftUI
 
 struct ProductDetailView: View {
     let product: Product  // 상품 정보를 전달받기 위한 프로퍼티 선언
+    
     @State private var quantity: Int = 1
     @State private var showingAlert: Bool = false
+    
+    @EnvironmentObject private var store: Store
     
     var body: some View {
         VStack(spacing: 0) {
@@ -113,10 +116,15 @@ struct ProductDetailView: View {
             title: Text("주문 확인"),
             message: Text("\(product.name)을(를) \(quantity)개 구매하겠습니까?"),
             primaryButton: .default(Text("확인"), action: {
-                // 주문 기능 구현 예정
+                self.placeOrder()  // 확인 버튼을 눌렀을 때 동작하도록 구현
             }),
             secondaryButton: .cancel(Text("취소"))
         )
+    }
+    
+    // 상품과 수량 정보를 placeOrder 메소드에 인수로 전달
+    func placeOrder() {
+        store.placeOrder(product: product, quantity: quantity)
     }
 }
 
