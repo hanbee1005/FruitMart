@@ -8,7 +8,7 @@
 import Foundation
 
 struct Product {
-    let id: UUID = UUID()  // identifiabe 프로토콜 준수를 위한 id 프로퍼티 추가
+    var id: UUID = UUID()  // identifiabe 프로토콜 준수를 위한 id 프로퍼티 추가
     let name: String
     let imageName: String
     let price: Int
