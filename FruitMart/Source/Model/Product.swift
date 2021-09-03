@@ -20,6 +20,8 @@ extension Product: Decodable {}
 
 extension Product: Identifiable {}
 
+extension Product: Equatable {}
+
 let productSamples = [
     Product(name: "나는야 무화과" , imageName: "fig" , price: 3100, description: "소화가 잘되고 변비에 좋은 달달한 국내산 무화과예요. 고기와 찰떡궁합!"),
     Product(name: "유기농 아보카도" , imageName: "avocado" , price: 2900, description: "미네랄도 풍부하고, 요리 장식과 소스로도 좋은 아보카도입니다."),
