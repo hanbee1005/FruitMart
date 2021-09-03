@@ -13,9 +13,16 @@ import Foundation
 final class Store: ObservableObject {
     // 특정 상품의 데이터가 변경되면 그 변경 사실을 관련된 뷰들이 모두 알고 갱신할 수 있게 하기 위해
     @Published var products: [Product]
+    @Published var orders: [Order] = []  // 전체 주문 목록
     
     init(filename: String = "ProductData.json") {
         self.products = Bundle.main.decode(filename: filename, as: [Product].self)
+    }
+    
+    func placeOrder(product: Product, quantity: Int) {
+        let nextId = Order.orderSequence.next()!
+        let order = Order(id: nextId, product: product, quantity: quantity)
+        orders.append(order)
     }
 }
 
