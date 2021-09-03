@@ -16,14 +16,13 @@ struct FavoriteButton: View {
     }
     
     var body: some View {
-        Button(action: {
-            self.store.toggleFavorite(of: product)
-        }) {
-            Image(systemName: imageName)
-                .imageScale(.large)
-                .foregroundColor(.peach)
-                .frame(width: 32, height: 32)
-        }
+        Image(systemName: imageName)
+            .imageScale(.large)
+            .foregroundColor(.peach)
+            .frame(width: 32, height: 32)
+            .onTapGesture {
+                self.store.toggleFavorite(of: product)
+            }
     }
 }
 
