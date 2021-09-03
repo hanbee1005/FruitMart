@@ -106,6 +106,9 @@ struct ProductDetailView: View {
 
 struct ProductDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductDetailView(product: productSamples[0])
+        ForEach(["iPhone 11 Pro", "iPhone 8"], id: \.self) {
+            ProductDetailView(product: productSamples[0])
+                .previewDevice(PreviewDevice(rawValue: $0))
+        }
     }
 }
