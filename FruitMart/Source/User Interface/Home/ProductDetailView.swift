@@ -10,6 +10,7 @@ import SwiftUI
 struct ProductDetailView: View {
     let product: Product  // 상품 정보를 전달받기 위한 프로퍼티 선언
     @State private var quantity: Int = 1
+    @State private var showingAlert: Bool = false
     
     var body: some View {
         VStack(spacing: 0) {
@@ -17,6 +18,7 @@ struct ProductDetailView: View {
             orderView  // 상품 정보를 출력하고 그 상품을 주문하기 위한 뷰
         }
         .edgesIgnoringSafeArea(.top)
+        .alert(isPresented: $showingAlert) { confirmAlert }  // alert 수식어 추가
     }
     
     var productImage: some View {
@@ -81,7 +83,9 @@ struct ProductDetailView: View {
     
     // 주문하기 버튼
     var placeOrderButton: some View {
-        Button(action: { }) {
+        Button(action: {
+                self.showingAlert = true  // 주문하기 버튼 클릭 시 알림창 출력
+        }) {
             Capsule()
                 .fill(Color.peach)
                 // 너비는 주어진 공간을 최대한 사용하고 높이는 최소, 최대치 지정
@@ -101,6 +105,18 @@ struct ProductDetailView: View {
         let lhsString = text[..<afterSpaceIdx].trimmingCharacters(in: .whitespaces)
         let rhsString = text[afterSpaceIdx...].trimmingCharacters(in: .whitespaces)
         return String(lhsString + "\n" + rhsString)
+    }
+    
+    // 알림창에 표시할 내용 정의
+    var confirmAlert: Alert {
+        Alert(
+            title: Text("주문 확인"),
+            message: Text("\(product.name)을(를) \(quantity)개 구매하겠습니까?"),
+            primaryButton: .default(Text("확인"), action: {
+                // 주문 기능 구현 예정
+            }),
+            secondaryButton: .cancel(Text("취소"))
+        )
     }
 }
 
