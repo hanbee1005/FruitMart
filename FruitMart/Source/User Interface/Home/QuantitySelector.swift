@@ -18,11 +18,9 @@ struct QuantitySelector: View {
         HStack {
             // 수량 감소 버튼
             Button(action: { self.changeQuantity(-1) }) {
-                Image(systemName: "minus.circle.fill")
-                    .imageScale(.large)
+                Symbol("minus.circle.fill", scale: .large, color: Color.gray.opacity(0.5))
                     .padding()
             }
-            .foregroundColor(Color.gray.opacity(0.5))
             
             // 현재 수량을 나타낼 텍스트
             Text("\(quantity)")
@@ -32,11 +30,9 @@ struct QuantitySelector: View {
             
             // 수량 증가 버튼
             Button(action: { self.changeQuantity(1) }) {
-                Image(systemName: "plus.circle.fill")
-                    .imageScale(.large)
+                Symbol("plus.circle.fill", scale: .large, color: Color.gray.opacity(0.5))
                     .padding()
             }
-            .foregroundColor(Color.gray.opacity(0.5))
         }
     }
     

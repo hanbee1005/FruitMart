@@ -25,9 +25,7 @@ struct ProductRow: View {
 
 private extension ProductRow {
     var productImage: some View {
-        Image(product.imageName)
-            .resizable()
-            .scaledToFill()
+        ResizedImage(product.imageName)
             .frame(width: 140)
             .clipped()
     }
