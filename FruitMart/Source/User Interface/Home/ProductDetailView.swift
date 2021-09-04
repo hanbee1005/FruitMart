@@ -96,6 +96,7 @@ struct ProductDetailView: View {
                             .foregroundColor(.white))
                 .padding(.vertical, 8)
         }
+        .buttonStyle(ShrinkButtonStyle())  // 커스텀 버튼 스타일 적용
     }
     
     func splitText(_ text: String) -> String {
