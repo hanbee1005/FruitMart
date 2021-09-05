@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A0AD25C26E4968E007808A4 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0AD25B26E4968E007808A4 /* Popup.swift */; };
+		1A0AD25E26E4AFA9007808A4 /* OrderComplateMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0AD25D26E4AFA9007808A4 /* OrderComplateMessage.swift */; };
 		1A1D9B0A26E234DA00EB5EA5 /* QuantitySelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1D9B0926E234DA00EB5EA5 /* QuantitySelector.swift */; };
 		1A1D9B0C26E2455800EB5EA5 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1D9B0B26E2455800EB5EA5 /* FavoriteButton.swift */; };
 		1A1D9B0E26E24B4E00EB5EA5 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1D9B0D26E24B4E00EB5EA5 /* Order.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		1A0AD25B26E4968E007808A4 /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
+		1A0AD25D26E4AFA9007808A4 /* OrderComplateMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderComplateMessage.swift; sourceTree = "<group>"; };
 		1A1D9B0926E234DA00EB5EA5 /* QuantitySelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantitySelector.swift; sourceTree = "<group>"; };
 		1A1D9B0B26E2455800EB5EA5 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		1A1D9B0D26E24B4E00EB5EA5 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				1A5B4DC826E10B3A00B447B5 /* ProductDetailView.swift */,
 				1A1D9B0926E234DA00EB5EA5 /* QuantitySelector.swift */,
 				1A1D9B0B26E2455800EB5EA5 /* FavoriteButton.swift */,
+				1A0AD25D26E4AFA9007808A4 /* OrderComplateMessage.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				FBF7329E26DF144200C5FC4F /* AppDelegate.swift in Sources */,
 				FB01214C26E1FACE005A2D80 /* Preview.swift in Sources */,
 				1A1D9B0C26E2455800EB5EA5 /* FavoriteButton.swift in Sources */,
+				1A0AD25E26E4AFA9007808A4 /* OrderComplateMessage.swift in Sources */,
 				1A1D9B0A26E234DA00EB5EA5 /* QuantitySelector.swift in Sources */,
 				FBF732A026DF144200C5FC4F /* SceneDelegate.swift in Sources */,
 				1A5B4DC726E1063200B447B5 /* Store.swift in Sources */,

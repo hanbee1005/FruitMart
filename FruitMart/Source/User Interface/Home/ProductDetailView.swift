@@ -22,7 +22,7 @@ struct ProductDetailView: View {
             orderView  // 상품 정보를 출력하고 그 상품을 주문하기 위한 뷰
         }
         .popup(isPresented: $showingPopup, content: {
-            Text("팝업")
+            OrderComplateMessage()
         })
         .edgesIgnoringSafeArea(.top)
         .alert(isPresented: $showingAlert) { confirmAlert }  // alert 수식어 추가
