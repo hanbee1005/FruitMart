@@ -75,3 +75,21 @@ fileprivate struct PopupToggle: ViewModifier {
             }
     }
 }
+
+extension View {
+    func popup<Content: View>(
+        isPresented: Binding<Bool>,
+        size: CGSize? = nil,
+        style: PopupStyle = .none,
+        @ViewBuilder content: () -> Content
+    ) -> some View {
+        if isPresented.wrappedValue {
+            let popup = Popup(size: size, style: style, message: content())
+            let popupToggle = PopupToggle(isPresented: isPresented)
+            let modifiedContent = self.modifier(popup).modifier(popupToggle)
+            return AnyView(modifiedContent)
+        } else {
+            return AnyView(self)
+        }
+    }
+}
