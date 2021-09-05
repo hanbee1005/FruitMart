@@ -41,8 +41,13 @@ struct Home: View {
     
     var productList: some View {
         List(store.products) { product in
-            NavigationLink(destination: ProductDetailView(product: product)) {
+            HStack {
                 ProductRow(product: product, quickOrder: self.$quickOrder)
+                NavigationLink(destination: ProductDetailView(product: product)) {
+                    EmptyView()
+                }
+                .frame(width: 0)
+                .hidden()
             }
         }
         .navigationBarTitle("과일마트")
