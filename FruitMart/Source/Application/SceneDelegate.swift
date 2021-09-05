@@ -18,6 +18,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
+        configureAppearance()
+        
         // Create the SwiftUI view that provides the window contents.
         let contentView = Home().environmentObject(Store())  // 환경 객체 주입
 
@@ -28,6 +30,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             self.window = window
             window.makeKeyAndVisible()
         }
+    }
+    
+    private func configureAppearance() {
+        // large 디스플레이 모드에 적용
+        UINavigationBar.appearance().largeTitleTextAttributes = [
+            .foregroundColor: UIColor(named: "peach")!
+        ]
+        
+        // inline 디스플레이 모드에 적용
+        UINavigationBar.appearance().titleTextAttributes = [
+            .foregroundColor: UIColor(named: "peach")!
+        ]
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
