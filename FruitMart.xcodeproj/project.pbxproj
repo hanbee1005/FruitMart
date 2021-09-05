@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A0AD25C26E4968E007808A4 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0AD25B26E4968E007808A4 /* Popup.swift */; };
 		1A1D9B0A26E234DA00EB5EA5 /* QuantitySelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1D9B0926E234DA00EB5EA5 /* QuantitySelector.swift */; };
 		1A1D9B0C26E2455800EB5EA5 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1D9B0B26E2455800EB5EA5 /* FavoriteButton.swift */; };
 		1A1D9B0E26E24B4E00EB5EA5 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1D9B0D26E24B4E00EB5EA5 /* Order.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A0AD25B26E4968E007808A4 /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
 		1A1D9B0926E234DA00EB5EA5 /* QuantitySelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantitySelector.swift; sourceTree = "<group>"; };
 		1A1D9B0B26E2455800EB5EA5 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		1A1D9B0D26E24B4E00EB5EA5 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
@@ -65,6 +67,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A0AD25A26E49660007808A4 /* ViewModifier */ = {
+			isa = PBXGroup;
+			children = (
+				1A0AD25B26E4968E007808A4 /* Popup.swift */,
+			);
+			path = ViewModifier;
+			sourceTree = "<group>";
+		};
 		1A5B4DC126E0E6BB00B447B5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +202,7 @@
 				FBF732BC26DF506200C5FC4F /* Extension */,
 				FB01214A26E1FAB3005A2D80 /* CustomView */,
 				1A9DDF5126E3060C00EF0C68 /* CustomStyle */,
+				1A0AD25A26E49660007808A4 /* ViewModifier */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -284,6 +295,7 @@
 				1A1D9B0A26E234DA00EB5EA5 /* QuantitySelector.swift in Sources */,
 				FBF732A026DF144200C5FC4F /* SceneDelegate.swift in Sources */,
 				1A5B4DC726E1063200B447B5 /* Store.swift in Sources */,
+				1A0AD25C26E4968E007808A4 /* Popup.swift in Sources */,
 				1A5B4DC526E103F400B447B5 /* BundleExtension.swift in Sources */,
 				FBF732A226DF144200C5FC4F /* Home.swift in Sources */,
 				FBF732BE26DF507800C5FC4F /* ColorExtension.swift in Sources */,
