@@ -14,7 +14,7 @@ enum PopupStyle {
 }
 
 // ViewModifier 프로토콜 채택
-struct Popup<Message: View>: ViewModifier {
+fileprivate struct Popup<Message: View>: ViewModifier {
     let size: CGSize?  // 팝업창의 크기
     let style: PopupStyle  // 앞에서 정의한 팝업 스타일
     let message: Message  // 팝업창에 나타낼 메시지
@@ -76,6 +76,17 @@ fileprivate struct PopupToggle: ViewModifier {
     }
 }
 
+fileprivate struct PopupItem<Item: Identifiable>: ViewModifier {
+    @Binding var item: Item?  // nil 아니면 팝업 표시
+    func body(content: Content) -> some View {
+        content
+            .disabled(item != nil)  // 팝업이 떠 있는 동안 다른 뷰에 대한 상호작용 비활성화
+            .onTapGesture {
+                self.item = nil  // 팝업창 제거
+            }
+    }
+}
+
 extension View {
     func popup<Content: View>(
         isPresented: Binding<Bool>,
@@ -87,6 +98,26 @@ extension View {
             let popup = Popup(size: size, style: style, message: content())
             let popupToggle = PopupToggle(isPresented: isPresented)
             let modifiedContent = self.modifier(popup).modifier(popupToggle)
+            return AnyView(modifiedContent)
+        } else {
+            return AnyView(self)
+        }
+    }
+}
+
+extension View {
+    func popup<Content: View, Item: Identifiable>(
+        item: Binding<Item?>,
+        size: CGSize? = nil,
+        style: PopupStyle = .none,
+        @ViewBuilder content: (Item) -> Content
+    ) -> some View {
+        // nill이 아닐 때만 팝업창 띄우기
+        if let selectedItem = item.wrappedValue {
+            let content = content(selectedItem)
+            let popup = Popup(size: size, style: style, message: content)
+            let popupItem = PopupItem(item: item)
+            let modifiedContent = self.modifier(popup).modifier(popupItem)
             return AnyView(modifiedContent)
         } else {
             return AnyView(self)
