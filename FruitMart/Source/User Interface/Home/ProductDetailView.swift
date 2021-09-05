@@ -12,6 +12,7 @@ struct ProductDetailView: View {
     
     @State private var quantity: Int = 1
     @State private var showingAlert: Bool = false
+    @State private var showingPopup: Bool = false
     
     @EnvironmentObject private var store: Store
     
@@ -20,7 +21,9 @@ struct ProductDetailView: View {
             productImage // 상품 이미지
             orderView  // 상품 정보를 출력하고 그 상품을 주문하기 위한 뷰
         }
-        .modifier(Popup(message: Text("팝업")))
+        .popup(isPresented: $showingPopup, content: {
+            Text("팝업")
+        })
         .edgesIgnoringSafeArea(.top)
         .alert(isPresented: $showingAlert) { confirmAlert }  // alert 수식어 추가
     }
@@ -125,6 +128,7 @@ struct ProductDetailView: View {
     // 상품과 수량 정보를 placeOrder 메소드에 인수로 전달
     func placeOrder() {
         store.placeOrder(product: product, quantity: quantity)
+        showingPopup = true
     }
 }
 
