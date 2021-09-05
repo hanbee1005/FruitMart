@@ -12,17 +12,20 @@ struct MainTabView: View {
         case home, recipe, gallery, myPage  // 4개의 탭 정의. 탭 뷰의 태그로 활용
     }
     
+    @State private var selectedTab: Tabs = .home
+    
     var body: some View {
-        TabView {
-            home
-                .environmentObject(Store())  // 환경 객체 주입
-            
-            recipe
-            
-            gallery
-            
-            myPage
+        TabView(selection: $selectedTab) {
+            Group {
+                home.environmentObject(Store())  // 환경 객체 주입
+                recipe
+                gallery
+                myPage
+            }
+            .accentColor(Color.primary)
         }
+        .accentColor(.peach)
+        .edgesIgnoringSafeArea(.top)
     }
 }
 
