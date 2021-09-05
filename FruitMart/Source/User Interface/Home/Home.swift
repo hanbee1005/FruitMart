@@ -21,6 +21,19 @@ struct Home: View {
             }
             .navigationBarTitle("과일마트")
         }
+        .popup(item: $quickOrder, content: popupMessage(product:))
+    }
+    
+    func popupMessage(product: Product) -> some View {
+        let name = product.name.split(separator: " ").last!
+        return VStack {
+            Text(name)  // 상품명 표시
+                .font(.title).bold().kerning(3)
+                .foregroundColor(.peach)
+                .padding()
+            
+            OrderComplateMessage()
+        }
     }
 }
 
