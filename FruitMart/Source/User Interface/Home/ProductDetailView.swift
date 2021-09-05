@@ -20,6 +20,7 @@ struct ProductDetailView: View {
             productImage // 상품 이미지
             orderView  // 상품 정보를 출력하고 그 상품을 주문하기 위한 뷰
         }
+        .modifier(Popup(message: Text("팝업")))
         .edgesIgnoringSafeArea(.top)
         .alert(isPresented: $showingAlert) { confirmAlert }  // alert 수식어 추가
     }
