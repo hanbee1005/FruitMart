@@ -42,6 +42,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         UINavigationBar.appearance().titleTextAttributes = [
             .foregroundColor: UIColor(named: "peach")!
         ]
+        
+        // clear 또는 nil 로 변경
+        UITableView.appearance().backgroundColor = .clear
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

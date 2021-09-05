@@ -40,17 +40,21 @@ struct Home: View {
     }
     
     var productList: some View {
-        List(store.products) { product in
-            HStack {
-                ProductRow(product: product, quickOrder: self.$quickOrder)
-                NavigationLink(destination: ProductDetailView(product: product)) {
-                    EmptyView()
+        List {
+            ForEach(store.products) { product in
+                HStack {
+                    ProductRow(product: product, quickOrder: self.$quickOrder)
+                    NavigationLink(destination: ProductDetailView(product: product)) {
+                        EmptyView()
+                    }
+                    .frame(width: 0)
+                    .hidden()
                 }
-                .frame(width: 0)
-                .hidden()
+                .listRowBackground(Color.background)  // listRow 배경색 변경
             }
         }
         .navigationBarTitle("과일마트")
+        .background(Color.background)
     }
     
     var showFavorite: Bool {
