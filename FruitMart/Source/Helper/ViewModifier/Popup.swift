@@ -62,3 +62,16 @@ struct Popup<Message: View>: ViewModifier {
             .offset(x: 0, y: -20)  // 팝업창 상단에 걸쳐지도록 원래 위치보다 위로 가도록 조정
     }
 }
+
+// ViewModifier 프로토콜 채택
+fileprivate struct PopupToggle: ViewModifier {
+    @Binding var isPresented: Bool  // true 일 때만 팝업창 표시
+    
+    func body(content: Content) -> some View {
+        content
+            .disabled(isPresented)
+            .onTapGesture {
+                self.isPresented.toggle()  // 팝업창 종료
+            }
+    }
+}
