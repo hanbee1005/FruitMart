@@ -15,7 +15,6 @@ struct MainTabView: View {
     var body: some View {
         TabView {
             home
-                .accentColor(Color.primary)
                 .environmentObject(Store())  // 환경 객체 주입
             
             recipe
