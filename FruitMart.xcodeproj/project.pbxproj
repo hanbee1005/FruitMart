@@ -29,6 +29,7 @@
 		FBEBDA3826E5CB9600E03530 /* AnyTransitionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBDA3726E5CB9600E03530 /* AnyTransitionExtension.swift */; };
 		FBEBDA3B26E5DFB800E03530 /* FruitCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBDA3A26E5DFB800E03530 /* FruitCard.swift */; };
 		FBEBDA3D26E5E0BC00E03530 /* ImageGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBDA3C26E5E0BC00E03530 /* ImageGallery.swift */; };
+		FBEBDA4026E5FE0F00E03530 /* MyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBDA3F26E5FE0F00E03530 /* MyPage.swift */; };
 		FBF7329E26DF144200C5FC4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF7329D26DF144200C5FC4F /* AppDelegate.swift */; };
 		FBF732A026DF144200C5FC4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF7329F26DF144200C5FC4F /* SceneDelegate.swift */; };
 		FBF732A226DF144200C5FC4F /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF732A126DF144200C5FC4F /* Home.swift */; };
@@ -63,6 +64,7 @@
 		FBEBDA3726E5CB9600E03530 /* AnyTransitionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTransitionExtension.swift; sourceTree = "<group>"; };
 		FBEBDA3A26E5DFB800E03530 /* FruitCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitCard.swift; sourceTree = "<group>"; };
 		FBEBDA3C26E5E0BC00E03530 /* ImageGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGallery.swift; sourceTree = "<group>"; };
+		FBEBDA3F26E5FE0F00E03530 /* MyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPage.swift; sourceTree = "<group>"; };
 		FBF7329A26DF144200C5FC4F /* FruitMart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FruitMart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBF7329D26DF144200C5FC4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBF7329F26DF144200C5FC4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,14 @@
 			path = ImageGallery;
 			sourceTree = "<group>";
 		};
+		FBEBDA3E26E5FDF300E03530 /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				FBEBDA3F26E5FE0F00E03530 /* MyPage.swift */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
 		FBF7329126DF144200C5FC4F = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +215,7 @@
 				FBF732B426DF148D00C5FC4F /* Home */,
 				FBEBDA3026E5A54900E03530 /* Recipe */,
 				FBEBDA3926E5DF9300E03530 /* ImageGallery */,
+				FBEBDA3E26E5FDF300E03530 /* MyPage */,
 			);
 			path = "User Interface";
 			sourceTree = "<group>";
@@ -339,6 +350,7 @@
 				FBEBDA3626E5B14200E03530 /* ShapeClipModifier.swift in Sources */,
 				FBF732BA26DF4C4300C5FC4F /* ProductRow.swift in Sources */,
 				FBF7329E26DF144200C5FC4F /* AppDelegate.swift in Sources */,
+				FBEBDA4026E5FE0F00E03530 /* MyPage.swift in Sources */,
 				FBEBDA3226E5A56300E03530 /* RecipeView.swift in Sources */,
 				FBEBDA3826E5CB9600E03530 /* AnyTransitionExtension.swift in Sources */,
 				FB01214C26E1FACE005A2D80 /* Preview.swift in Sources */,
