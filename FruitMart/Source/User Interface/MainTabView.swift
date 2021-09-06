@@ -17,7 +17,7 @@ struct MainTabView: View {
     var body: some View {
         TabView(selection: $selectedTab) {
             Group {
-                home.environmentObject(Store())  // 환경 객체 주입
+                home
                 recipe
                 gallery
                 myPage

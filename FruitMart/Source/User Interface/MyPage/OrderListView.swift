@@ -8,9 +8,18 @@
 import SwiftUI
 
 struct OrderListView: View {
+    @EnvironmentObject var store: Store  // 주문 정보를 다루려고 추가
+    
     var body: some View {
-        emptyOrders
-            .navigationBarTitle("주문 목록")
+        ZStack {
+            if store.orders.isEmpty {
+                emptyOrders  // 주문 내역이 없을 때 표시
+            } else {
+                orderList  // 주문 내역이 있을 때 표시
+            }
+        }
+        .animation(.default)  // 뷰가 전환될 때 애니메이션 적용
+        .navigationBarTitle("주문 목록")
     }
     
     var emptyOrders: some View {
@@ -26,10 +35,19 @@ struct OrderListView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.background)
     }
+    
+    var orderList: some View {
+        List {
+            ForEach(store.orders) {
+                OrderRow(order: $0)
+            }
+        }
+    }
 }
 
 struct OrderListView_Previews: PreviewProvider {
     static var previews: some View {
         OrderListView()
+            .environmentObject(Store())
     }
 }
