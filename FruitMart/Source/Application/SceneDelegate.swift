@@ -45,6 +45,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         // clear 또는 nil 로 변경
         UITableView.appearance().backgroundColor = .clear
+        
+        UISlider.appearance().thumbTintColor = UIColor(named: "peach")
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
