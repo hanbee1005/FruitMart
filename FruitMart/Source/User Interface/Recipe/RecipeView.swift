@@ -60,6 +60,8 @@ struct RecipeView: View {
             
             ResizedImage(recipes[currentIndex].imageName, contentMode: .fit)
                 .padding(.horizontal)
+                .transition(.stripes())  // stripes 효과 추가
+                .id(currentIndex)  // id로 뷰를 식별하여 id가 다르면 새로운 뷰를 추가하도록 설정
             
             Spacer()
             
