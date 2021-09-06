@@ -19,6 +19,7 @@ struct FavoriteProductScrollView: View {
             }
         }
         .padding()
+        .transition(.slide)
     }
     
     var title: some View {
@@ -34,7 +35,7 @@ struct FavoriteProductScrollView: View {
         }
         .padding(.bottom, 8)
         .onTapGesture {
-            self.showingImage.toggle()  // 이미지 표시 여부 변경
+            withAnimation{ self.showingImage.toggle() } // withAnimation 함수 사용
         }
     }
     
@@ -51,6 +52,7 @@ struct FavoriteProductScrollView: View {
                 }
             }
         }
+        .animation(.spring(dampingFraction: 0.78))
     }
     
     func eachProduct(_ product: Product) -> some View {

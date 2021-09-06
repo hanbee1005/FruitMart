@@ -19,7 +19,9 @@ struct FavoriteButton: View {
         Symbol(imageName, scale: .large, color: .peach)
             .frame(width: 32, height: 32)
             .onTapGesture {
-                self.store.toggleFavorite(of: product)
+                withAnimation {
+                    self.store.toggleFavorite(of: product)
+                }
             }
     }
 }
