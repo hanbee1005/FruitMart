@@ -26,6 +26,7 @@
 		FBEBDA3226E5A56300E03530 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBDA3126E5A56300E03530 /* RecipeView.swift */; };
 		FBEBDA3426E5AED000E03530 /* Stripes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBDA3326E5AED000E03530 /* Stripes.swift */; };
 		FBEBDA3626E5B14200E03530 /* ShapeClipModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBDA3526E5B14200E03530 /* ShapeClipModifier.swift */; };
+		FBEBDA3826E5CB9600E03530 /* AnyTransitionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBDA3726E5CB9600E03530 /* AnyTransitionExtension.swift */; };
 		FBF7329E26DF144200C5FC4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF7329D26DF144200C5FC4F /* AppDelegate.swift */; };
 		FBF732A026DF144200C5FC4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF7329F26DF144200C5FC4F /* SceneDelegate.swift */; };
 		FBF732A226DF144200C5FC4F /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF732A126DF144200C5FC4F /* Home.swift */; };
@@ -57,6 +58,7 @@
 		FBEBDA3126E5A56300E03530 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		FBEBDA3326E5AED000E03530 /* Stripes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stripes.swift; sourceTree = "<group>"; };
 		FBEBDA3526E5B14200E03530 /* ShapeClipModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeClipModifier.swift; sourceTree = "<group>"; };
+		FBEBDA3726E5CB9600E03530 /* AnyTransitionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTransitionExtension.swift; sourceTree = "<group>"; };
 		FBF7329A26DF144200C5FC4F /* FruitMart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FruitMart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBF7329D26DF144200C5FC4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBF7329F26DF144200C5FC4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 			children = (
 				FBF732BD26DF507800C5FC4F /* ColorExtension.swift */,
 				1A5B4DC426E103F400B447B5 /* BundleExtension.swift */,
+				FBEBDA3726E5CB9600E03530 /* AnyTransitionExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				FBF732BA26DF4C4300C5FC4F /* ProductRow.swift in Sources */,
 				FBF7329E26DF144200C5FC4F /* AppDelegate.swift in Sources */,
 				FBEBDA3226E5A56300E03530 /* RecipeView.swift in Sources */,
+				FBEBDA3826E5CB9600E03530 /* AnyTransitionExtension.swift in Sources */,
 				FB01214C26E1FACE005A2D80 /* Preview.swift in Sources */,
 				1A1D9B0C26E2455800EB5EA5 /* FavoriteButton.swift in Sources */,
 				1A0AD25E26E4AFA9007808A4 /* OrderComplateMessage.swift in Sources */,
