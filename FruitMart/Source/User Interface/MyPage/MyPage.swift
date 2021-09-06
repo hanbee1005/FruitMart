@@ -21,7 +21,7 @@ struct MyPage: View {
     var orderInfoSection: some View {
         // 색션을 사용해 이후에 추가될 다른 메뉴와 구분
         Section(header: Text("주문 정보").fontWeight(.medium)) {
-            NavigationLink(destination: Text("주문 목록 화면")) {
+            NavigationLink(destination: OrderListView()) {
                 Text("주문 목록")
             }
             .frame(height: 44)  // 높이 지정
