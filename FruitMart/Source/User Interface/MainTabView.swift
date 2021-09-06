@@ -26,6 +26,8 @@ struct MainTabView: View {
         }
         .accentColor(.peach)
         .edgesIgnoringSafeArea(.top)
+        // selectedTab의 값이 recipe인 경우에만 상태 표시줄 숨김 처리
+        .statusBar(hidden: selectedTab == .recipe)
     }
 }
 
