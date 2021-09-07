@@ -80,6 +80,18 @@ struct MyPage: View {
             .resizable().scaledToFill()
             .clipShape(Circle())
             .frame(width: 100, height: 100)
+            .overlay(pickImageButton.offset(x: 8, y: 0), alignment: .bottomTrailing)
+    }
+    
+    // 프로필 사진 변경 버튼
+    var pickImageButton: some View {
+        Button(action: {}) {
+            Circle()
+                .fill(Color.white)
+                .frame(width: 32, height: 32)
+                .shadow(color: .primaryShadow, radius: 2, x: 2, y: 2)
+                .overlay(Image("pencil").foregroundColor(.black))
+        }
     }
 }
 
