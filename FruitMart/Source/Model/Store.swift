@@ -20,6 +20,7 @@ final class Store: ObservableObject {
     
     init(filename: String = "ProductData.json") {
         self.products = Bundle.main.decode(filename: filename, as: [Product].self)
+        self.orders = loadData(at: orderFilePath, type: [Order].self)
     }
     
     func placeOrder(product: Product, quantity: Int) {
@@ -66,6 +67,16 @@ extension Store {
             try data.write(to: path)  // 파일로 저장
         } catch {
             print(error)
+        }
+    }
+    
+    func loadData<T>(at path: URL, type: [T].Type) -> [T] where T: Decodable {
+        do {
+            let data = try Data(contentsOf: path)  // 파일 읽어오기
+            let decodedData = try JSONDecoder().decode(type, from: data)  // 복호화
+            return decodedData
+        }catch {
+            return []
         }
     }
 }
