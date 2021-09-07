@@ -13,6 +13,8 @@ struct MyPage: View {
     @State private var pickedImage: Image = Image(systemName: "person.crop.circle")
     @State private var nickname: String = ""
     
+    @State private var isPickerPresented: Bool = false
+    
     // 피커 선택지
     private let pickerDataSource: [CGFloat] = [140, 150, 160]
     
@@ -28,6 +30,9 @@ struct MyPage: View {
                 }
             }
             .navigationBarTitle("마이페이지")
+        }
+        .sheet(isPresented: $isPickerPresented) {
+            ImagePickerView(pickedImage: self.$pickedImage)
         }
     }
     
@@ -87,7 +92,7 @@ struct MyPage: View {
     
     // 프로필 사진 변경 버튼
     var pickImageButton: some View {
-        Button(action: {}) {
+        Button(action: { self.isPickerPresented = true }) {
             Circle()
                 .fill(Color.white)
                 .frame(width: 32, height: 32)
