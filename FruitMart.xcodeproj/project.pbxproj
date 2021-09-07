@@ -23,6 +23,7 @@
 		1A9DDF5326E3064000EF0C68 /* ShrinkButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9DDF5226E3064000EF0C68 /* ShrinkButtonStyle.swift */; };
 		FB01214C26E1FACE005A2D80 /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB01214B26E1FACE005A2D80 /* Preview.swift */; };
 		FB85564326E6F46B004A9C06 /* AppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB85564226E6F46B004A9C06 /* AppSetting.swift */; };
+		FB85564526E723B3004A9C06 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB85564426E723B3004A9C06 /* ImagePickerView.swift */; };
 		FBEBDA2F26E5A4B000E03530 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBDA2E26E5A4B000E03530 /* Recipe.swift */; };
 		FBEBDA3226E5A56300E03530 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBDA3126E5A56300E03530 /* RecipeView.swift */; };
 		FBEBDA3426E5AED000E03530 /* Stripes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBDA3326E5AED000E03530 /* Stripes.swift */; };
@@ -61,6 +62,7 @@
 		1A9DDF5226E3064000EF0C68 /* ShrinkButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShrinkButtonStyle.swift; sourceTree = "<group>"; };
 		FB01214B26E1FACE005A2D80 /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
 		FB85564226E6F46B004A9C06 /* AppSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSetting.swift; sourceTree = "<group>"; };
+		FB85564426E723B3004A9C06 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		FBEBDA2E26E5A4B000E03530 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		FBEBDA3126E5A56300E03530 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		FBEBDA3326E5AED000E03530 /* Stripes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stripes.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				FBEBDA3F26E5FE0F00E03530 /* MyPage.swift */,
 				FBEBDA4126E6000E00E03530 /* OrderListView.swift */,
 				FBEBDA4326E6012E00E03530 /* OrderRow.swift */,
+				FB85564426E723B3004A9C06 /* ImagePickerView.swift */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				FBEBDA3826E5CB9600E03530 /* AnyTransitionExtension.swift in Sources */,
 				FB01214C26E1FACE005A2D80 /* Preview.swift in Sources */,
 				1A1D9B0C26E2455800EB5EA5 /* FavoriteButton.swift in Sources */,
+				FB85564526E723B3004A9C06 /* ImagePickerView.swift in Sources */,
 				1A0AD25E26E4AFA9007808A4 /* OrderComplateMessage.swift in Sources */,
 				1A1D9B0A26E234DA00EB5EA5 /* QuantitySelector.swift in Sources */,
 				FBF732A026DF144200C5FC4F /* SceneDelegate.swift in Sources */,
