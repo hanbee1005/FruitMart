@@ -11,6 +11,7 @@ struct MyPage: View {
     @EnvironmentObject var store: Store
     
     @State private var pickedImage: Image = Image(systemName: "person.crop.circle")
+    @State private var nickname: String = ""
     
     // 피커 선택지
     private let pickerDataSource: [CGFloat] = [140, 150, 160]
@@ -69,6 +70,7 @@ struct MyPage: View {
     var userInfo: some View {
         VStack {
             profileImage
+            nicknameTextField
         }
         .frame(maxWidth: .infinity, maxHeight: 200)
         .background(Color.background)
@@ -92,6 +94,15 @@ struct MyPage: View {
                 .shadow(color: .primaryShadow, radius: 2, x: 2, y: 2)
                 .overlay(Image("pencil").foregroundColor(.black))
         }
+    }
+    
+    // 사용자 닉네임
+    var nicknameTextField: some View {
+        TextField("닉네임", text: $nickname)
+            .font(.system(size: 25, weight: .medium))
+            .textContentType(.nickname)  // 텍스트 필드 사용 용도
+            .multilineTextAlignment(.center)  // 텍스트 가운데 정렬
+            .autocapitalization(.none)  // 자동 대문자화 비활성화
     }
 }
 
