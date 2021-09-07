@@ -20,6 +20,13 @@ struct OrderListView: View {
         }
         .animation(.default)  // 뷰가 전환될 때 애니메이션 적용
         .navigationBarTitle("주문 목록")
+        .navigationBarItems(trailing: editButton)  // 에디트 버튼 추가
+    }
+    
+    var editButton: some View {
+        !store.orders.isEmpty
+            ? AnyView(EditButton())  // 주문 내역이 있을 때
+            : AnyView(EmptyView())  // 주문 내역이 없을 때
     }
     
     var emptyOrders: some View {
