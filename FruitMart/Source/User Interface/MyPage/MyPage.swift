@@ -10,15 +10,21 @@ import SwiftUI
 struct MyPage: View {
     @EnvironmentObject var store: Store
     
+    @State private var pickedImage: Image = Image(systemName: "person.crop.circle")
+    
     // 피커 선택지
     private let pickerDataSource: [CGFloat] = [140, 150, 160]
     
     var body: some View {
         NavigationView {
-            // 폼을 이용해 마이 페이지 메뉴 그룹화
-            Form {
-                orderInfoSection
-                appSettingSection  // 앱 설정 색션
+            VStack {
+                userInfo
+                
+                // 폼을 이용해 마이 페이지 메뉴 그룹화
+                Form {
+                    orderInfoSection
+                    appSettingSection  // 앱 설정 색션
+                }
             }
             .navigationBarTitle("마이페이지")
         }
@@ -44,7 +50,7 @@ struct MyPage: View {
     }
     
     var productHeightPicker: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Text("상품 이미지 높이 조절")
             
             // 피커에서 선택한 값을 AppSetting의 productRowHeight와 연동
@@ -57,6 +63,23 @@ struct MyPage: View {
         }
         .frame(height: 72)
         
+    }
+    
+    // 프로필 사진과 닉네임이 들어갈 컨테이너 역할
+    var userInfo: some View {
+        VStack {
+            profileImage
+        }
+        .frame(maxWidth: .infinity, maxHeight: 200)
+        .background(Color.background)
+    }
+    
+    // 프로필 사진
+    var profileImage: some View {
+        pickedImage
+            .resizable().scaledToFill()
+            .clipShape(Circle())
+            .frame(width: 100, height: 100)
     }
 }
 
