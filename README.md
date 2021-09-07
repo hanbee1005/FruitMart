@@ -1,7 +1,7 @@
 # FruitMart
 스윗한SwiftUI 과일마트 프로젝트 따라하기
 
-## 초기 프로젝트 구조
+## 프로젝트 구조
 ```
 FruitMart
 ├─Source
@@ -9,8 +9,20 @@ FruitMart
 │  │  ├─AppDelegate.swift
 │  │  └─SceneDelegate.swift
 │  │      
-│  └─User Interface
-│     └─Home
+│  ├─User Interface
+│  │  ├─MainTabView.swift  // TabView
+│  │  ├─Home
+│  │  ├─Recipe
+│  │  ├─ImageGallery
+│  │  └─MyPage
+│  │      
+│  ├─Helper
+│  │  ├─CustomStyle
+│  │  ├─CustomView
+│  │  ├─Extension
+│  │  └─ViewModifier
+│  │      
+│  └─Model  // 데이터 관련 모델 객체
 │          
 ├─Resources
 │  ├─Assets.xcassets    // 이미지와 색 설정
@@ -29,3 +41,15 @@ FruitMart
 
 - ContentView.swift 파일을 Home.swift 파일로 변경하였기 때문에 기존 ContentView() 를 사용한 부분을 Home() 으로 변경!       
   (Home.swift, SceneDelegate.swift 파일 수정)
+
+## 주요 기능
+
+### NavigationView
+
+### TabView
+
+### @State, @Binding
+
+### @EnvironmentObject
+
+### UIViewController, UIView 호환 
