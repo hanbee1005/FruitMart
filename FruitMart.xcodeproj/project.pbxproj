@@ -22,6 +22,7 @@
 		1A9DDF5026E3027800EF0C68 /* ResizedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9DDF4F26E3027800EF0C68 /* ResizedImage.swift */; };
 		1A9DDF5326E3064000EF0C68 /* ShrinkButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9DDF5226E3064000EF0C68 /* ShrinkButtonStyle.swift */; };
 		FB01214C26E1FACE005A2D80 /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB01214B26E1FACE005A2D80 /* Preview.swift */; };
+		FB85564326E6F46B004A9C06 /* AppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB85564226E6F46B004A9C06 /* AppSetting.swift */; };
 		FBEBDA2F26E5A4B000E03530 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBDA2E26E5A4B000E03530 /* Recipe.swift */; };
 		FBEBDA3226E5A56300E03530 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBDA3126E5A56300E03530 /* RecipeView.swift */; };
 		FBEBDA3426E5AED000E03530 /* Stripes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEBDA3326E5AED000E03530 /* Stripes.swift */; };
@@ -59,6 +60,7 @@
 		1A9DDF4F26E3027800EF0C68 /* ResizedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizedImage.swift; sourceTree = "<group>"; };
 		1A9DDF5226E3064000EF0C68 /* ShrinkButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShrinkButtonStyle.swift; sourceTree = "<group>"; };
 		FB01214B26E1FACE005A2D80 /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
+		FB85564226E6F46B004A9C06 /* AppSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSetting.swift; sourceTree = "<group>"; };
 		FBEBDA2E26E5A4B000E03530 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		FBEBDA3126E5A56300E03530 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		FBEBDA3326E5AED000E03530 /* Stripes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stripes.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				1A5B4DC626E1063200B447B5 /* Store.swift */,
 				1A1D9B0D26E24B4E00EB5EA5 /* Order.swift */,
 				FBEBDA2E26E5A4B000E03530 /* Recipe.swift */,
+				FB85564226E6F46B004A9C06 /* AppSetting.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				1A9DDF4E26E300B200EF0C68 /* Symbol.swift in Sources */,
 				1A5B4DC326E0E6E100B447B5 /* Product.swift in Sources */,
 				1A9DDF5326E3064000EF0C68 /* ShrinkButtonStyle.swift in Sources */,
+				FB85564326E6F46B004A9C06 /* AppSetting.swift in Sources */,
 				FBEBDA4426E6012E00E03530 /* OrderRow.swift in Sources */,
 				1A5B4DC926E10B3A00B447B5 /* ProductDetailView.swift in Sources */,
 				1A0AD26226E4C9DE007808A4 /* MainTabView.swift in Sources */,
