@@ -10,6 +10,9 @@ import SwiftUI
 struct MyPage: View {
     @EnvironmentObject var store: Store
     
+    // 피커 선택지
+    private let pickerDataSource: [CGFloat] = [140, 150, 160]
+    
     var body: some View {
         NavigationView {
             // 폼을 이용해 마이 페이지 메뉴 그룹화
@@ -35,7 +38,25 @@ struct MyPage: View {
         Section(header: Text("앱 설정").fontWeight(.medium)) {
             Toggle("즐겨찾는 상품 표시", isOn: $store.appSetting.showFavoriteList)
                 .frame(height: 44)
+            
+            productHeightPicker
         }
+    }
+    
+    var productHeightPicker: some View {
+        VStack {
+            Text("상품 이미지 높이 조절")
+            
+            // 피커에서 선택한 값을 AppSetting의 productRowHeight와 연동
+            Picker("", selection: $store.appSetting.productRowHeight) {
+                ForEach(pickerDataSource, id: \.self) {
+                    Text(String(format: "%.0f", $0)).tag($0)  // 포맷을 이용해 소수점 제거
+                }
+            }
+            .pickerStyle(SegmentedPickerStyle())
+        }
+        .frame(height: 72)
+        
     }
 }
 

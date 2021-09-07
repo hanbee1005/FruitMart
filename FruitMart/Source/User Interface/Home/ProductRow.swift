@@ -20,7 +20,7 @@ struct ProductRow: View {
             productImage        // 상품 이미지
             productDescription  // 상품 설명
         }
-        .frame(height: 150)  // 뷰 전체의 높이를 150으로 설정
+        .frame(height: store.appSetting.productRowHeight)  // 뷰 전체의 높이를 150으로 설정
         .background(Color.primary.colorInvert())
         .cornerRadius(6)
         .shadow(color: .primaryShadow,radius: 1, x: 2, y: 2)
@@ -117,5 +117,6 @@ struct ProductRow_Previews: PreviewProvider {
         }
         .padding()  // sizeThatFits를 이용하여 보더라도 약간의 여백을 주도록 추가
         .previewLayout(.sizeThatFits) // 콘텐츠 크기에 맞춰서 프리뷰 컨테이너 크기 조정
+        .environmentObject(Store())
     }
 }
