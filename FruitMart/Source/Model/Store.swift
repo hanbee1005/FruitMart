@@ -27,6 +27,7 @@ final class Store: ObservableObject {
         let nextId = Order.orderSequence.next()!
         let order = Order(id: nextId, product: product, quantity: quantity)
         orders.append(order)
+        Order.lastOrderID = nextId
     }
 }
 
