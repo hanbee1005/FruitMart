@@ -11,6 +11,8 @@ import Foundation
 // environmentObject 수식어로 추가해 줄 것인데
 // 이 수식어는 ObservableObject 타입만 받기 때문에 프로토콜 채택
 final class Store: ObservableObject {
+    @Published var appSetting: AppSetting
+    
     // 특정 상품의 데이터가 변경되면 그 변경 사실을 관련된 뷰들이 모두 알고 갱신할 수 있게 하기 위해
     @Published var products: [Product]
     // 전체 주문 목록
@@ -18,7 +20,9 @@ final class Store: ObservableObject {
         didSet { saveData(at: orderFilePath, data: orders) }
     }
     
-    init(filename: String = "ProductData.json") {
+    init(filename: String = "ProductData.json", appSetting: AppSetting = AppSetting()) {
+        self.appSetting = appSetting
+        
         self.products = Bundle.main.decode(filename: filename, as: [Product].self)
         self.orders = loadData(at: orderFilePath, type: [Order].self)
     }
