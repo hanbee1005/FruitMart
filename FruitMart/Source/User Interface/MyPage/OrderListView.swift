@@ -49,6 +49,7 @@ struct OrderListView: View {
                 OrderRow(order: $0)
             }
             .onDelete(perform: store.deleteOrder(at:))
+            .onMove(perform: store.moveOrder(from:to:))
         }
     }
 }
