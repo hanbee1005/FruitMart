@@ -41,6 +41,7 @@ struct OrderListView: View {
             ForEach(store.orders) {
                 OrderRow(order: $0)
             }
+            .onDelete(perform: store.deleteOrder(at:))
         }
     }
 }

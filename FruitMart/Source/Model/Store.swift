@@ -29,6 +29,12 @@ final class Store: ObservableObject {
         orders.append(order)
         Order.lastOrderID = nextId
     }
+    
+    // 주문 내역 삭제
+    func deleteOrder(at indexes: IndexSet) {
+        guard let index = indexes.first else { return }
+        orders.remove(at: index)
+    }
 }
 
 extension Store {
