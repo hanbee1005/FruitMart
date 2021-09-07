@@ -19,3 +19,5 @@ struct Order: Identifiable {
         product.price * quantity
     }
 }
+
+extension Order: Codable {}
