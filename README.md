@@ -172,6 +172,8 @@ List {
   + PlainList
   + GroupedList
 
+### GeometryReader
+
 ### TabView
 
 ### @State, @Binding
