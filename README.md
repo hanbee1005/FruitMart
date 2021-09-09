@@ -112,6 +112,66 @@ NavigationView { ... }
   .navigationViewStyle(StackNavigationViewStyle)  // 스타일 지정
 ```
 
+### List
+하나의 열에 여러 개의 행으로 표현되는 UI를 구성하는 뷰 (= UITableView)
+
+- 정적 콘텐츠
+
+- 동적 콘텐츠
+  + Range<Int>
+    ```swift
+    // Half-Open Range Oparator만 사용 가능
+    List(0..<100) {
+      Text("\($0)")
+    }
+    ```
+  + RandomAcessCollection
+    - id 식별자 지정 (Hashable 프로토콜을 준수하는 경우 self 입력 가능, 기본 타입 대부분이 준수)
+    ```swift
+    List(["A", "B", "C", "D", "E"], id: \.self) { ... }
+
+    struct User: Hashable { ... }
+    List([User(name: "steve"), User(name: "James")], id: \.name) { ... }
+    ```
+    - identifiable 프로토콜 채택
+    ```swift
+    struct Animal: Identifiable {
+      let id = UUID()  // id의 타입은 UUID 외에도 Hashable을 준수하는 모든 타입 사용 가능
+      ...
+    }
+
+    List([Animal(name: "Tory"), Animal(name: "Lilly")]) { ... }  // id 생략
+    ```
+
+- ForEach를 활용하여 정적, 동적 컨텐츠 조합 가능
+
+- Section
+```swift
+let fruits = ["Apple", "Banana", "Peach"]
+let drinks = ["Coke", "Water", "Juice"]
+
+let titles = ["Fruits", "Drinks"]
+let data = [fruits, drinks]
+
+List {
+  ForEach(data.indices) { index in
+    Section(
+      header: Text(titles[index]).font(.title),
+      footer: HStack { Spacer(); Text("\(data[index].count)건") }
+    ) {
+        ForEach(data[index], id: \.self) {
+          Text($0)
+        }
+    }
+  }
+}
+```
+
+- ListStyle
+  + DefaultList
+  + PlainList
+  + GroupedList
+
 ### TabView
 
 ### @State, @Binding
