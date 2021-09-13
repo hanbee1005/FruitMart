@@ -176,6 +176,27 @@ List {
 
 ### TabView
 
+### ViewModifier
+커스텀 수식어를 만들 수 있도록 해주는 것
+
+```swift
+struct CustomViewModifier: ViewModifier {
+  var borderColor: Color = .red
+
+  func body(content: Content) -> some View {
+    ...
+  }
+}
+
+// #1
+Text("Custom ViewModifier")
+  .modifier(CustomViewModifier(borderColor: .blue))
+
+// #2
+ModifiedContent(content: Text("Custom ViewModifier"),
+                  modifier: CustomViewModifier(borderColor: .blue))
+```
+
 ### @State, @Binding
 
 ### @EnvironmentObject

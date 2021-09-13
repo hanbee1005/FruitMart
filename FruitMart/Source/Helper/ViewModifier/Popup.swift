@@ -51,6 +51,7 @@ fileprivate struct Popup<Message: View>: ViewModifier {
             .cornerRadius(12)
             .shadow(color: .primaryShadow, radius: 15, x: 5, y: 5)
             .overlay(self.checkCircleMark, alignment: .top)
+            .position(x: $0.size.width / 2, y: $0.size.height / 2)
         }
     }
     
@@ -58,7 +59,7 @@ fileprivate struct Popup<Message: View>: ViewModifier {
     private var checkCircleMark: some View {
         Symbol("checkmark.circle.fill", color: .peach)
             .font(Font.system(size: 60).weight(.semibold))
-            .background(Color.white.scaleEffect(0.8))  // 체크 마크 배경 색을 흰색으로 지정
+            .background(Color.clear)  // 체크 마크 배경 색을 흰색으로 지정
             .offset(x: 0, y: -20)  // 팝업창 상단에 걸쳐지도록 원래 위치보다 위로 가도록 조정
     }
 }
