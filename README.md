@@ -202,3 +202,40 @@ ModifiedContent(content: Text("Custom ViewModifier"),
 ### @EnvironmentObject
 
 ### UIViewController, UIView 호환 
+
+### 이슈
+1. popup 뷰 가운데 정렬 안됨
+이슈: 상품을 주문한 경우, 주문 완료 알림을 popup 뷰로 띄우는데 왼쪽 상단에 고정되서 나오는 문제가 있었음.      
+해결: GeometryReader 내부 VStack에 position 수식어를 추가하여 중앙에 위치하도록 수정 (책에 코드 빠짐...)
+```swift
+// Popup.swift
+private var popupContent: some View {
+    GeometryReader {
+        // 팝업창에서 표시할 메시지
+        VStack {
+            self.message
+        }
+        .frame(
+            width: self.size?.width ?? $0.size.width * 0.6,
+            height: self.size?.height ?? $0.size.height * 0.25
+        )
+        .background(Color.primary.colorInvert())
+        .cornerRadius(12)
+        .shadow(color: .primaryShadow, radius: 15, x: 5, y: 5)
+        .overlay(self.checkCircleMark, alignment: .top)
+        .position(x: $0.size.width / 2, y: $0.size.height / 2)  // 이 부분 추가!!
+    }
+}
+```
+
+2. 테이블 row separator 안 사라짐
+이슈: list 내 row를 구분하는 선이 아래와 같은 코드를 추가하였지만 사라지지 않음. 
+```swift
+List {
+    ...
+}
+.onAppear {
+    UITableView.appearance().separatorStyle = .none
+}
+```
+해결: 

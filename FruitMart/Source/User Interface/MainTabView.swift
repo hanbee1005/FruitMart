@@ -23,11 +23,11 @@ struct MainTabView: View {
                 myPage
             }
             .accentColor(Color.primary)
+            // selectedTab의 값이 recipe인 경우에만 상태 표시줄 숨김 처리
+            .statusBar(hidden: selectedTab == .recipe)
         }
         .accentColor(.peach)
         .edgesIgnoringSafeArea(.top)
-        // selectedTab의 값이 recipe인 경우에만 상태 표시줄 숨김 처리
-        .statusBar(hidden: selectedTab == .recipe)
     }
 }
 
@@ -72,5 +72,6 @@ private extension MainTabView {
 struct MainTabView_Previews: PreviewProvider {
     static var previews: some View {
         MainTabView()
+            .environmentObject(Store())
     }
 }
