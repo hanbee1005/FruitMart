@@ -239,3 +239,37 @@ List {
 }
 ```
 해결: 
+
+3. 상단 status bar 제거 안됨
+이슈: 레시피 탭에서만 상태표시줄이 보이지 않도록 아래 코드를 추가하였지만 사라지지 않음
+```swift
+TabView(selection: $selectedTab) {
+    Group {
+        home
+        recipe
+        gallery
+        myPage
+    }
+    .accentColor(Color.primary)
+}
+.accentColor(.peach)
+.edgesIgnoringSafeArea(.top)
+// selectedTab의 값이 recipe인 경우에만 상태 표시줄 숨김 처리
+.statusBar(hidden: selectedTab == .recipe)
+```
+해결: 각 탭을 이루는 뷰마다 statusBar(hidden:) 수식어를 적용할 수 있도록 위치 수정
+```swift
+TabView(selection: $selectedTab) {
+    Group {
+        home
+        recipe
+        gallery
+        myPage
+    }
+    .accentColor(Color.primary)
+    // selectedTab의 값이 recipe인 경우에만 상태 표시줄 숨김 처리
+    .statusBar(hidden: selectedTab == .recipe)
+}
+.accentColor(.peach)
+.edgesIgnoringSafeArea(.top)
+```
