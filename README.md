@@ -43,8 +43,7 @@ FruitMart
   (Home.swift, SceneDelegate.swift 파일 수정)
 
 
-
-### 이슈
+## 이슈
 1. popup 뷰 가운데 정렬 안됨
 이슈: 상품을 주문한 경우, 주문 완료 알림을 popup 뷰로 띄우는데 왼쪽 상단에 고정되서 나오는 문제가 있었음.      
 해결: GeometryReader 내부 VStack에 position 수식어를 추가하여 중앙에 위치하도록 수정 (책에 코드 빠짐...)
